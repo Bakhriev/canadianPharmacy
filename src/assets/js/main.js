@@ -22,6 +22,7 @@ const burgerMenu = () => {
 		}
 	})
 }
+burgerMenu()
 
 const dropdowns = document.querySelectorAll('[data-dropdown]')
 
