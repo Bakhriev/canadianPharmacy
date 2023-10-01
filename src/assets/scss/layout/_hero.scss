@@ -90,7 +90,7 @@
 			width: 100%;
 			height: 500px;
 		}
-		@media screen and (max-width: 375px) {
+		@media screen and (max-width: 540px) {
 			height: 337px;
 		}
 		img {
@@ -151,7 +151,7 @@
 	}
 }
 .btn {
-	padding: 22px 28px;
+	padding: 20px 28px;
 	border-radius: 60px;
 	border: 2px solid #fff;
 	color: #fff;
@@ -308,7 +308,14 @@
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 100%;
-	background: #00d1ff;
+	background-color: #00d1ff;
+	transition: background-color 150ms ease-in-out;
+	@include hover {
+		background-color: #05abd0;
+	}
+	&:active {
+		background-color: #05abd0;
+	}
 }
 .card-list {
 	display: flex;
