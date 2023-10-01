@@ -24,20 +24,21 @@ const burgerMenu = () => {
 }
 burgerMenu()
 
+// For Mobile Dropdown --Start--
 const dropdowns = document.querySelectorAll('[data-dropdown]')
-
 dropdowns.forEach(dropdown => {
 	const subMenu = dropdown.querySelector('[data-dropdown-menu]')
 	dropdown.addEventListener('click', toggleSubMenu)
 })
-
 function toggleSubMenu() {
 	const subMenu = this.querySelector('[data-dropdown-menu]')
 	subMenu.style.maxHeight = subMenu.style.maxHeight
 		? ''
 		: subMenu.scrollHeight + 'px'
 }
+// For Mobile Dropdown --End--
 
+// Swiper
 var swiper = new Swiper('.swiper-1', {
 	slidesPerView: 'auto',
 	spaceBetween: 60,
@@ -45,4 +46,19 @@ var swiper = new Swiper('.swiper-1', {
 		el: '.products-pagination',
 		clickable: true,
 	},
+})
+
+const searchOpenBtn = document.querySelector('[data-search-open-btn]')
+const searchCloseBtn = document.querySelector('[data-search-close-btn]')
+const searchMenu = document.querySelector('[data-search-block]')
+const body = document.querySelector('body')
+
+searchOpenBtn.addEventListener('click', () => {
+	searchMenu.classList.add('active')
+	body.classList.add('disable-scroll')
+})
+
+searchCloseBtn.addEventListener('click', () => {
+	searchMenu.classList.remove('active')
+	body.classList.remove('disable-scroll')
 })
