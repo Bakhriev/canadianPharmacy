@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
+		/>
+		<title>@title</title>
+	</head>
+
+	<body>
+		@include('assets/layout/components/overlay.html')
+		@include('assets/layout/search.html')
+
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container container">
+					<a href="#" class="header__logo logo">
+						<img
+							width="272"
+							height="40"
+							src="./assets/img/logo.svg"
+							alt="logo"
+						/>
+					</a>
+
+					<div class="header__navigation">
+						<nav class="nav header__nav">
+							<ul class="nav__list">
+								<li>
+									<a href="#" class="nav__link">Home</a>
+								</li>
+								<li>
+									<ul href="#" class="menu">
+										<li class="menu-item">
+											<a href="#">Country</a>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="14"
+												height="8"
+												viewBox="0 0 14 8"
+												fill="none"
+											>
+												<path d="M1 0.5L7 6.5L13 0.5" />
+											</svg>
+										</li>
+										<ul class="sub-menu">
+											<li class="sub-menu-item">
+												<a href="#">Tokio</a>
+											</li>
+											<li class="sub-menu-item">
+												<a href="#">Tokio</a>
+											</li>
+											<li class="sub-menu-item">
+												<a href="#">Tokio</a>
+											</li>
+										</ul>
+									</ul>
+								</li>
+								<li>
+									<ul href="#" class="menu">
+										<li class="menu-item">
+											<a href="#">FAQ</a>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="14"
+												height="8"
+												viewBox="0 0 14 8"
+												fill="none"
+											>
+												<path d="M1 0.5L7 6.5L13 0.5" />
+											</svg>
+										</li>
+										<li class="menu-item-has-children">
+											<ul class="sub-menu">
+												<li class="sub-menu-item">
+													<a href="#">Tokio</a>
+												</li>
+												<li class="sub-menu-item">
+													<a href="#">Tokio</a>
+												</li>
+												<li class="sub-menu-item">
+													<a href="#">Tokio</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="nav__link">Delivery and Insurance</a>
+								</li>
+								<li>
+									<a href="#" class="nav__link">Contact Us</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<button class="burger">
+						<span></span>
+					</button>
+				</div>
+			</header>
+
+			<main class="main">@include('assets/layout/faq.html')</main>
+
+			@include('assets/layout/footer.html')
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+		<script src="./assets/js/main.js"></script>
+	</body>
+</html>

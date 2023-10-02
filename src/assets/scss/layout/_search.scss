@@ -1,4 +1,27 @@
 .search-block {
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		bottom: 0;
+		left: -200px;
+		width: 1000px;
+		height: 700px;
+		@media screen and (max-width: 992px) {
+			width: 600px;
+			height: 400px;
+			right: -150px;
+			left: auto;
+			background-size: 600px 400px;
+		}
+		background-image: url('../img/searchBgPlus.svg');
+		background-position: center center;
+		background-size: 1000px 700px;
+		background-repeat: no-repeat;
+	}
 	background: #0d0a42;
 
 	position: fixed;
@@ -40,8 +63,7 @@
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		padding-top: 50px;
 		height: 100%;
 	}
 
