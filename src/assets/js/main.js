@@ -39,12 +39,20 @@ function toggleSubMenu() {
 // For Mobile Dropdown --End--
 
 // Swiper
+let slidesPerCol = 4
+
+if (window.innerWidth < 768) {
+	slidesPerCol = 2
+}
+
 var swiper = new Swiper('.swiper-1', {
-	slidesPerView: 'auto',
-	spaceBetween: 60,
+	slidesPerView: 1,
+	slidesPerColumn: slidesPerCol,
+	spaceBetween: 30,
+	slidesPerColumnFill: 'column',
+
 	pagination: {
 		el: '.products-pagination',
-		clickable: true,
 	},
 })
 
