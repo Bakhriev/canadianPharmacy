@@ -231,6 +231,7 @@
 	}
 }
 .card {
+	min-height: 350px;
 	gap: 24px;
 	display: flex;
 	flex-direction: column;
@@ -288,6 +289,7 @@
 	// .card__bottom
 
 	&__bottom {
+		margin-top: 26px;
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
@@ -312,7 +314,6 @@
 .discount-mobile {
 	display: none;
 	padding: 8px 9px 8px 10px;
-	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: 10px;
