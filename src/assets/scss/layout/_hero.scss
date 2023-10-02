@@ -1,4 +1,38 @@
 .hero {
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -100px;
+		@media screen and (max-width: 768px) {
+			bottom: 600px;
+		}
+		left: 0;
+		width: 800px;
+		height: 900px;
+		background: linear-gradient(
+			177deg,
+			rgba(47, 38, 249, 0.67) 2.71%,
+			rgba(252, 129, 240, 0.25) 123.45%
+		);
+		border-radius: 50%;
+		filter: blur(120px);
+		-webkit-filter: blur(120px);
+	}
+	&::after {
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		border-radius: 50%;
+		width: 400px;
+		background-color: rgba(249, 137, 190, 0.25);
+		height: 400px;
+		filter: blur(120px);
+		-webkit-filter: blur(120px);
+	}
 	position: relative;
 	padding-top: 200px;
 	padding-bottom: 60px;
@@ -60,15 +94,20 @@
 		}
 	}
 
-	// .hero__btn
-	&__btn {
+	// .hero__text
+	&__text-mobile {
+		display: none;
+		p + p {
+			margin-top: 20px;
+		}
+		@media screen and (max-width: 992px) {
+			display: block;
+		}
+	}
+	&__text {
 		@media screen and (max-width: 992px) {
 			display: none;
 		}
-	}
-
-	// .hero__text
-	&__text {
 		p + p {
 			margin-top: 20px;
 		}
@@ -268,6 +307,47 @@
 		line-height: 100%;
 		max-width: 100%;
 		width: 100%;
+	}
+}
+.discount-mobile {
+	display: none;
+	padding: 8px 9px 8px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	border-radius: 67px;
+	border: 2px dashed #fff;
+	color: #fff;
+	font-family: 'Montserrat';
+	font-weight: 500;
+	line-height: 100%;
+	border-radius: 55px;
+
+	div {
+		&:first-child {
+			font-size: 20px;
+			@media screen and (max-width: 768px) {
+				font-size: 16px;
+			}
+		}
+		&:last-child {
+			padding: 10px;
+			background: $orange;
+			font-size: 16px;
+			border-radius: 55px;
+			@media screen and (max-width: 375px) {
+				font-size: 12px;
+			}
+		}
+	}
+	@media screen and (max-width: 992px) {
+		display: flex;
+	}
+}
+.hide-on-mobile {
+	@media screen and (max-width: 992px) {
+		display: none;
 	}
 }
 .discount {
