@@ -189,16 +189,28 @@
 	display: grid;
 	place-items: center;
 	padding: 8px;
-	img {
+	position: relative;
+	&::before {
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		content: '';
+		position: absolute;
+		@include center;
 		width: 24px;
 		height: 24px;
-		object-fit: cover;
 	}
 }
 .hot {
+	&::before {
+		background-image: url('../img/hot.png');
+	}
 	background-color: $orange;
 }
 .like {
+	&::before {
+		background-image: url('../img/like.png');
+	}
 	background-color: #1a0a83;
 }
 
